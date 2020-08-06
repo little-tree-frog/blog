@@ -4,4 +4,9 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   get "home", to: "pages#homepage"
   root to: "pages#homepage"
+
+  resources :posts do
+    resources :posts #, only: [:show, :new, :create, :edit, :delete]
+  end
+
 end
