@@ -5,8 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "faker"
+
+puts "Starting seed"
+Post.destroy_all
 
 posts = Post.create([
-  {name: "Post 1", body: "This is my first post"},
-  {name: "Post 2", body: "This is my second post"}
+  {name: "Post 1", body: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false)},
+  {name: "Post 2", body: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false)}
 ])
+
+puts "Finished seed"
