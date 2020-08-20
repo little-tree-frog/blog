@@ -1,9 +1,15 @@
 <h1>Create a new blog post</h1>
 
-<%= form_for(@post) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :body %>
-  <%= f.text_area :body, cols: 20, rows: 40, class: "" %>
-  <%= f.submit class: "button" %>
-<% end %>
+<div class="form-container">
+  <%= form_for(@post) do |f| %>
+    <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    </div>
+    <div>
+    <%= f.label :body %>
+    <%= f.text_area :body, cols: 20, rows: 40, class: "" %>
+    </div>
+    <%= f.submit class: "button" %>
+  <% end %>
+</div>
