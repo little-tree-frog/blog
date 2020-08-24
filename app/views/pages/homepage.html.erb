@@ -1,6 +1,7 @@
 <div class="container">
   <h2>Latest post</h2>
     <div>
+      <%= link_to @posts.last.name, post_path(post) %>
       <%= @posts.last.name %>
       <%= @posts.last.body %>
     </div>
