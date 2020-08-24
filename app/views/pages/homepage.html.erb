@@ -1,13 +1,15 @@
 <div class="container">
   <h2>Latest post</h2>
+    <div>
+      <%= @posts.last.name %>
+      <%= @posts.last.body %>
+    </div>
 
   <h2>Past posts</h2>
-
-  <% @posts.each do |post| %>
-    <div>
-      <%= post.name %>
-      <%= post.body %>
-    </div>
-  <% end %>
-
+    <% @posts.order(created_at: :desc)[1..-1].each do |post| %>
+        <div>
+          <%= post.name %>
+          <%= post.body %>
+        </div>
+    <% end %>
 </div>
