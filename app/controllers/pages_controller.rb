@@ -5,5 +5,6 @@ class PagesController < ApplicationController
 
   def homepage
     @posts = Post.all
+    @post = Post.last
   end
 end

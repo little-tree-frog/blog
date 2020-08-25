@@ -1,15 +1,15 @@
 <div class="container">
+
   <h2>Latest post</h2>
     <div>
-      <%= link_to @posts.last.name, post_posts_path(@post) %>
-      <%= @posts.last.name %>
+      <%= link_to @posts.last.name, post_path(@post) %>
       <%= @posts.last.body %>
     </div>
 
   <h2>Past posts</h2>
     <% @posts.order(created_at: :desc)[1..-1].each do |post| %>
         <div>
-          <%= post.name %>
+          <%= link_to post.name, post_path(post) %>
           <%= post.body %>
         </div>
     <% end %>

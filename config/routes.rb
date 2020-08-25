@@ -6,8 +6,5 @@ Rails.application.routes.draw do
   root to: "pages#homepage"
   # get "posts/new", to: "posts#new"
 
-  resources :posts do
-    resources :posts #, only: [:show, :new, :create, :edit, :delete]
-  end
-
+  resources :posts #, only: [:show, :new, :create, :edit, :delete]
 end
