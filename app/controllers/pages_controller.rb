@@ -1,13 +1,9 @@
 class PagesController < ApplicationController
-  def index
+  def about
     @posts = Post.all
   end
 
   def homepage
     @posts = Post.all
-  end
-
-  def show
-    @post = Post.find(params[:id])
   end
 end
