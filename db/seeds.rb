@@ -15,4 +15,8 @@ posts = Post.create([
   {name: "Post 2", body: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false)}
 ])
 
+users = User.create([
+  {email: "hello@world.com", password: "helloworld"}
+  ])
+
 puts "Finished seed"

@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # get "posts/new", to: "posts#new"
 
   resources :posts #, only: [:show, :new, :create, :edit, :delete]
+  resources :tags
 end
