@@ -1,16 +1,12 @@
 <h1>Create a new blog post</h1>
-
 <div class="form-container">
-  <%= form_for(@post) do |f| %>
-    <div>
-    <%= f.label :name %>
+  <%= form_with model: @post do |f| %>
+    <%= f.label :name, "Post title:" %>
     <%= f.text_field :name %>
-    </div>
     <div>
-    <%= f.label :body %>
-    <%= f.text_area :body, cols: 20, rows: 40, class: "" %>g
-    <%= render "shared/tags" %>
+      <%= f.text_area :body, size: "150x30" %>
     </div>
-    <%= f.submit class: "button" %>
+    <%= f.submit "Create post" %>
   <% end %>
+
 </div>

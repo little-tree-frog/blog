@@ -1,0 +1,5 @@
+<%= form_with(method: "get") do %>
+  <%= label_tag("Search all posts:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
