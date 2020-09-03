@@ -6,6 +6,7 @@ ruby '2.6.5'
 #Additional gems
 gem 'devise'
 gem 'font-awesome-sass'
+gem 'pg_search'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
