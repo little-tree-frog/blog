@@ -22,6 +22,12 @@ tags = Tag.create([
   {tag: "education"}
 ])
 
+3.times do
+  posts.each do |post|
+    post.tags << Tag.create(tag: tags.sample.tag)
+  end
+end
+
 users = User.create([
   {email: "hello@world.com", password: "helloworld"}
   ])

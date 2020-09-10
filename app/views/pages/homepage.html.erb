@@ -6,6 +6,7 @@
     <div>
       <%= link_to @posts.last.name, post_path(@post) %>
       <%= @posts.last.body %>
+      <%= @posts.last.tags.map{|t| t.tag}.join(", ") %>
     </div>
 
   <h2>Past posts</h2>
@@ -13,6 +14,7 @@
         <div>
           <%= link_to post.name, post_path(post) %>
           <%= post.body %>
+          <%= post.tags.map{|t| t.tag}.join(", ") %>
         </div>
     <% end %>
 </div>
